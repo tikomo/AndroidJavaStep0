@@ -7,11 +7,12 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.shisokuenzan.R;
+import com.example.tips.TipsCollection;
 import com.example.tips_class.ChildA;
 import com.example.tips_class.ChildB;
 import com.example.tips_exception.ExceptionTest;
 import com.example.tips_extends.AppClass;
-import com.example.tips.TipsClass; // 別パッケージのクラスを呼び出す為に
+import com.example.tips.TipsSyntax; // 別パッケージのクラスを呼び出す為に
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,19 +36,43 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // クリック時の処理
                 Log.d(TAG_NAME, "BUTTON1 onClick!");
+            }
+        });
 
+        findViewById(R.id.buttonSyntax).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 // --------------------------------------------------
                 // 基本的な文法の確認
                 // --------------------------------------------------
                 {
                     debugMsg("----- 基本的な文法の確認 -----");
-                    TipsClass tipsClass = new TipsClass();
+                    TipsSyntax tipsSyntax = new TipsSyntax();
 
-                    debugMsg(tipsClass.version());
-                    debugMsg(tipsClass.author());
-                    tipsClass.test();
+                    debugMsg(tipsSyntax.version());
+                    debugMsg(tipsSyntax.author());
+                    tipsSyntax.test();
                 }
+            }
+        });
 
+        findViewById(R.id.buttonArray).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // --------------------------------------------------
+                // 配列の確認
+                // --------------------------------------------------
+                {
+                    debugMsg("----- 配列の確認 -----");
+                    TipsCollection tipsCollection = new TipsCollection();
+                    tipsCollection.fnCollection();
+                }
+            }
+        });
+
+        findViewById(R.id.buttonClass1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 // --------------------------------------------------
                 // クラスの構造の確認
                 // --------------------------------------------------
@@ -61,7 +86,12 @@ public class MainActivity extends AppCompatActivity {
 
                     // appClass.COPYLIGHT = "Hello World"; <- finalで指定しているので書き換え不可能
                 }
+            }
+        });
 
+        findViewById(R.id.buttonClass2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 // --------------------------------------------------
                 // クラスの継承の確認
                 // --------------------------------------------------
@@ -79,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
                         arr1[idx].message();
                     }
                 }
-
             }
         });
 

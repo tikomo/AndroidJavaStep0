@@ -2,7 +2,6 @@ package com.example.sample;
 
 import android.util.Log;
 
-import com.example.tips.TipsClass;
 import com.example.tips_unittest.CalcClass;
 
 import org.junit.Test;

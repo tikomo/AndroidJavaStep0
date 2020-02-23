@@ -6,27 +6,47 @@
     android:layout_height="match_parent"
     tools:context="com.example.sample.MainActivity">
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Button"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="665dp"
+        android:orientation="vertical"
+        >
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="クリック確認" />
+
+        <Button
+            android:id="@+id/buttonSyntax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="文法" />
+
+        <Button
+            android:id="@+id/buttonArray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="配列" />
+
+        <Button
+            android:id="@+id/buttonClass1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="クラスの書き方" />
+
+        <Button
+            android:id="@+id/buttonClass2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="クラスの継承" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="例外" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

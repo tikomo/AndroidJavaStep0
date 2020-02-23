@@ -1,10 +1,9 @@
 package com.example.tips;
 
 import android.util.Log;
-
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Random;
+
 
 
 /**
@@ -12,7 +11,7 @@ import java.util.Random;
  *
  *
  */
-public class TipsClass {
+public class TipsSyntax {
 
     /**
      * デバッグログ用のTAG
@@ -98,9 +97,6 @@ public class TipsClass {
         Log.d(TAG_NAME, "call fnArray");
         fnArray();
 
-        Log.d(TAG_NAME, "call fnArrayList");
-        fnArrayList();
-
         Log.d(TAG_NAME, "call arrayParam");
         arrayParam(new int[] {1,2,3,4,5});
 
@@ -117,6 +113,9 @@ public class TipsClass {
 
         Log.d(TAG_NAME, String.format("CLASS NAME = %s ----- END ----", CLASS_NAME));
     }
+
+
+
 
     /**
      * デバッグログの書き方
@@ -379,22 +378,6 @@ public class TipsClass {
 
     }
 
-    /**
-     * 動的配列
-     */
-    private void fnArrayList() {
-
-        ArrayList<Integer> arrInt = new ArrayList<>();
-        arrInt.add(1);
-        arrInt.add(2);
-        arrInt.add(3);
-        arrInt.add(4);
-        arrInt.add(5);
-
-        for (int n : arrInt) {
-            Log.d(TAG_NAME, String.format("n = %d", n));
-        }
-    }
 
     /**
      * 配列を引数
@@ -423,4 +406,7 @@ public class TipsClass {
 
         return arr;
     }
+
+
+
 }
